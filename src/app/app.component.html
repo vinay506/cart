@@ -4,22 +4,14 @@
   </h1>
 </div>
 <div class="row">
-  <div class="card col-sm-3 col-xs-12 col-md-4" style="width: 18rem;">
-    <img src="https://images.cloudelements.io/mandrill201810221710.png" class="card-img-top" alt="Mandrill">
+  <div class="card col-sm-3 col-xs-12 col-md-4" *ngFor="let user of usersContentList">
+    <img src="{{user?.image}}" class="card-img-top" alt="{{user?.name}}">
     <div class="card-body">
-      <div class="text-content"><div class="key">Name: </div><div>Mandrill</div></div>
-      <div class="text-content"><div class="key">Author: </div><div>"MaxwellWarnerCE"</div></div>
-      <div class="text-content"><div class="key">Description: </div><div>"mailchimp's transactional email service, mandrill"</div></div>
-      <div class="text-content"><div class="key">key: </div><div>"mandrill_3"</div></div>
+      <div class="text-content"><div class="key">Name: </div><div>{{user?.name}}</div></div>
+      <div class="text-content"><div class="key">Author: </div><div>{{user?.author}}</div></div>
+      <div class="text-content"><div class="key">Description: </div><div>{{user?.description}}</div></div>
+      <div class="text-content"><div class="key">key: </div><div>{{user?.key}}</div></div>
     </div>
   </div>
-  <div class="card col-sm-3 col-xs-12 col-md-4" style="width: 18rem;">
-    <img src="https://images.cloudelements.io/mandrill201810221710.png" class="card-img-top" alt="Mandrill">
-    <div class="card-body">
-      <div class="text-content"><div class="key">Name: </div><div>Mandrill</div></div>
-      <div class="text-content"><div class="key">Author: </div><div>"MaxwellWarnerCE"</div></div>
-      <div class="text-content"><div class="key" >Description: </div><div class="ellipses" >Provide secure identity management and single sign-on to any application, whether in the cloud, on-premises or on a mobile device.</div></div>
-      <div class="text-content"><div class="key">key: </div><div>"mandrill_3"</div></div>
-    </div>
-  </div>
+ 
 </div>
