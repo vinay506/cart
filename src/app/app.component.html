@@ -1,15 +1,15 @@
 <div >
-  <h1>
+  <h1 class="text-center">
     Sample product catalog
   </h1>
 </div>
 <div class="row">
-  <div class="card col-sm-3 col-xs-12 col-md-4" *ngFor="let user of usersContentList">
+  <div class="card col-sm-4 col-xs-12 col-md-3" *ngFor="let user of usersContentList">
     <img src="{{user?.image}}" class="card-img-top" alt="{{user?.name}}">
     <div class="card-body">
       <div class="text-content"><div class="key">Name: </div><div>{{user?.name}}</div></div>
       <div class="text-content"><div class="key">Author: </div><div>{{user?.author}}</div></div>
-      <div class="text-content"><div class="key">Description: </div><div>{{user?.description}}</div></div>
+      <div class="text-content"><div class="key">Description: </div><div class="ellipses" style="-webkit-box-orient: vertical" title="{{user?.description}}">{{user?.description}}</div></div>
       <div class="text-content"><div class="key">key: </div><div>{{user?.key}}</div></div>
     </div>
   </div>

@@ -9,7 +9,7 @@ import { ApiCallService } from './services/api-call.service';
 export class AppComponent implements OnInit{
   title = 'cart';
   usersContentList = [];
-
+  sample = 'https://raw.githubusercontent.com/CloudElementsOpenLabs/elements/master/TrackTik/tracktikapi2.png';
   constructor(private apiCall:ApiCallService){
 
   }
@@ -30,6 +30,9 @@ export class AppComponent implements OnInit{
       let array=[];
     array =   Object.entries(obj).map((item)=>{
       if(item && item[1]){
+        if(!item[1]['image']){
+          item[1]['image'] = this.sample;
+        }
         return item[1];
       }
     })
